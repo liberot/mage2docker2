@@ -1,22 +1,17 @@
 version: '3'
 
 services:
-  mage2:
-    container_name: mage2
-    build: ./img.mage2
-    volumes:
-      - ./html/magento2:/var/www/html
-    ports:
-      - 8081:80
-    links: 
-      - db
 
   db:
     container_name: db
-    build: ./img.db
-    environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=1
-      - MYSQL_ROOT_PASSWORD=
+    build: ./db_image
 
+  mage2:
+    container_name: mage2
+    build: ./mage2_image
+    volumes:
+      - ./htdocs/magento2:/var/www/html
+    ports:
+      - 8081:80
 
 

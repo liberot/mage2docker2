@@ -7,6 +7,9 @@ echo "about to execute composer wait.."
 /usr/bin/php -d memory_limit=-1 ./composer.phar upgrade 
 /usr/bin/php -d memory_limit=-1 ./composer.phar install
 
+echo "setting up magento2 table"
+mysql -uroot -proot -hdb -e 'CREATE DATABASE magento2'
+
 echo "about to setup mage2 wait..."
 
 /usr/bin/php -d memory_limit=-1 ./bin/magento setup:install
