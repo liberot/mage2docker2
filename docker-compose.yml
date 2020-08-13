@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mage2:
+    container_name: mage2
+    build: ./img.mage2
+    volumes:
+      - ./html/magento2:/var/www/html
+    ports:
+      - 8081:80
+
+
