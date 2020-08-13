@@ -7,11 +7,10 @@ services:
     build: ./db_image
 
   mage2:
-    container_name: mage2
+    container_name: mage2 
     build: ./mage2_image
     volumes:
       - ./htdocs/magento2:/var/www/html
     ports:
       - 8081:80
-
 
