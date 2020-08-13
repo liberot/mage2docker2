@@ -2,8 +2,8 @@
 echo "setup.sh"
 
 #echo "about to execute composer wait.."
-#/usr/bin/php -d memory_limit=-1 ./composer.phar upgrade 
-#/usr/bin/php -d memory_limit=-1 ./composer.phar install
+/usr/bin/php -d memory_limit=-1 ./composer.phar upgrade 
+/usr/bin/php -d memory_limit=-1 ./composer.phar install
 
 echo "about to setup mage2 wait..."
 /usr/bin/php -d memory_limit=-1 ./bin/magento setup:upgrade
@@ -13,5 +13,5 @@ echo "about to setup mage2 wait..."
 /usr/bin/php -d memory_limit=-1 ./bin/magento indexer:reindex
 
 echo "about to start server.. now diss is..."
-/usr/bin/php -d memory_limit=-1 -S 127.0.0.1:80 -t ./pub ./phpserver/router.php
+/usr/bin/php -S 127.0.0.1:8080 -t ./pub ./phpserver/router.php
 

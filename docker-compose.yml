@@ -12,5 +12,5 @@ services:
     volumes:
       - ./htdocs/magento2:/var/www/html
     ports:
-      - 8081:80
+      - 8080:8080
 
