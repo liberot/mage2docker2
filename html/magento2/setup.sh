@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "about to execute compoese"
+echo "about to execute composer wait.."
+echo "./app/ent/env.php dbhost might wonk with mage2"
 
 /usr/bin/php -d memory_limit=-1 ./composer.phar upgrade 
 /usr/bin/php -d memory_limit=-1 ./composer.phar install
