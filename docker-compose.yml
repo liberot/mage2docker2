@@ -8,5 +8,15 @@ services:
       - ./html/magento2:/var/www/html
     ports:
       - 8081:80
+    links: 
+      - db
+
+  db:
+    container_name: db
+    build: ./img.db
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_ROOT_PASSWORD=
+
 
 
