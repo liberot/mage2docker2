@@ -1,6 +1,9 @@
 FROM debian 
 
 RUN apt-get update                      && \
+  apt-get -y install apache2 vim        && \
+  a2enmod rewrite                       && \
+  a2enmod headers                       && \
   apt-get -y install       \
     php7.3                 \
     php7.3-curl            \
@@ -29,9 +32,11 @@ RUN apt-get update                      && \
     php7.3-soap            \
     php7.3-mysql           \
     php7.3-fpm             \
-    php7.3-bcmath          
+    php7.3-bcmath          \
+    libapache2-mod-php7.3
 
 WORKDIR /var/www/html
-
 CMD sh ./setup.sh
+
+CMD apachectl -DFOREGROUND
 
