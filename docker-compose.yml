@@ -7,6 +7,11 @@ services:
     build: ./images/db
     volumes: 
       - ./db/magento2:/var/lib/mysql
+    environment:
+      MAGE2_DB_CLIENT: root 
+      MAGE2_DB_AUTH: 
+      MAGE2_DB_ROOT_AUTH: 
+      MAGE2_DB_NAME: magento2
 
   mage2:
     container_name: mage2 

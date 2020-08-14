@@ -1,3 +1,2 @@
-create database magento2;
-create database magento3;
-create database magento5;
+create database magento500;
+create database ${MAGE2_DB_NAME};
