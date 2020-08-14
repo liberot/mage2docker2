@@ -38,5 +38,4 @@ RUN apt-get update                      && \
 WORKDIR /var/www/html
 CMD sh ./setup.sh
 
-CMD apachectl -DFOREGROUND
 
