@@ -7,4 +7,3 @@ ENV MYSQL_PASSWORD=
 COPY ./init.sql /docker-entrypoint-initdb.d/init.sql
 
 
-

@@ -4,11 +4,13 @@ services:
 
   db:
     container_name: db
-    build: ./db_image
+    build: ./images/db
+    volumes: 
+      - ./db/magento2:/var/lib/mysql
 
   mage2:
     container_name: mage2 
-    build: ./mage2_image
+    build: ./images/mage2
     volumes:
       - ./htdocs/magento2:/var/www/html
     ports:
