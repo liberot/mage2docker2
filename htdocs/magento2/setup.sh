@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "about to execute setup.sh ...wait.."
+#echo "about to execute setup.sh ...wait.."
 
 echo "about to execute composer wait.."
 /usr/bin/php -d memory_limit=-1 ./composer.phar upgrade 
