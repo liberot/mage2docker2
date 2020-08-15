@@ -2,8 +2,7 @@ FROM mariadb:10.4
 
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=1
 ENV MYSQL_ROOT_PASSWORD=${MAGE2_DB_ROOT_AUTH}
-ENV MYSQL_USER=${MAGE2_DB_CLIENT_NAME}
 ENV MYSQL_PASSWORD=${MAGE2_DB_CLIENT_AUTH}
 
-COPY ./init.sql /docker-entrypoint-initdb.d/init.sql
+COPY ./00.init.sql /docker-entrypoint-initdb.d/00.init.sql
 

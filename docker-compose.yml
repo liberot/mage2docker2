@@ -9,7 +9,7 @@ services:
       - ./db/magento2:/var/lib/mysql
     environment:
       MAGE2_DB_NAME: magento2
-      MAGE2_DB_CLIENT_NAME: root 
+      MAGE2_DB_CLIENT_NAME: root
       MAGE2_DB_CLIENT_AUTH: 
       MAGE2_DB_ROOT_AUTH: 
 
